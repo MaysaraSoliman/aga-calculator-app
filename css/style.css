@@ -1,0 +1,261 @@
+:root {
+    --primary-color-Purple: hsl(259, 100%, 65%);
+    --primary-color-LightRed: hsl(0, 100%, 67%);
+    --white-color: hsl(0, 0%, 100%);
+    --Off-white: hsl(0, 0%, 94%);
+    --Light-grey: hsl(0, 0%, 86%);
+    --Smokey-grey: hsl(0, 1%, 44%);
+    --Off-black: hsl(0, 0%, 8%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    border: none;
+    position: relative;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: 'Poppins', sans-serif;
+}
+
+.container {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/* Mobile Screens */
+@media (min-width: 576px) {
+    .container {
+        width: 500px;
+    }
+}
+
+/* small Screens */
+@media (min-width: 768px) {
+    .container {
+        width: 750px;
+    }
+}
+
+/* medium Screens */
+@media (min-width: 992px) {
+    .container {
+        width: 970px;
+    }
+}
+
+/* small Screens */
+@media (min-width: 1200px) {
+    .container {
+        width: 1170px;
+    }
+}
+
+/* Start age-calcuator-app Section */
+#ageCalculatorApp {
+    background-color: var(--Off-white);
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#ageCalculatorApp .container {
+    padding: 50px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 3px 3px 10px var(--Light-grey);
+}
+
+#ageCalculatorApp .container .app-wrapper {
+    padding: 60px;
+    background-color: var(--white-color);
+    border-radius: 16px;
+    border-bottom-right-radius: 150px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 700px;
+}
+
+#ageCalculatorApp .container .app-wrapper .inputs {
+    display: flex;
+    gap: 20px;
+}
+
+#ageCalculatorApp .container .app-wrapper .inputs .col-input {
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    gap: 5px;
+}
+
+#ageCalculatorApp .container .app-wrapper .inputs .col-input label {
+    color: var(--Smokey-grey);
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+
+#ageCalculatorApp .container .app-wrapper .inputs .col-input label.active {
+    color: var(--primary-color-LightRed);
+}
+
+#ageCalculatorApp .container .app-wrapper .inputs .col-input input {
+    padding: 10px 20px;
+    border: 1px solid var(--Light-grey);
+    border-radius: 6px;
+    max-width: 120px;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+#ageCalculatorApp .container .app-wrapper .inputs .col-input input:focus-visible {
+    outline-color: var(--primary-color-Purple);
+}
+
+#ageCalculatorApp .container .app-wrapper .inputs .col-input input.active {
+    border-color: var(--primary-color-LightRed);
+}
+
+#ageCalculatorApp .container .app-wrapper .inputs .col-input input::placeholder {
+    font-size: 22px;
+    font-weight: 700;
+}
+
+#ageCalculatorApp .container .app-wrapper .inputs .col-input span {
+    display: none;
+    font-size: 10px;
+    color: var(--primary-color-LightRed);
+    font-style: italic;
+}
+
+#ageCalculatorApp .container .app-wrapper .inputs .col-input span.active {
+    display: block;
+}
+
+#ageCalculatorApp .container .app-wrapper .lineAndButton {
+    display: flex;
+    align-items: center;
+}
+
+#ageCalculatorApp .container .app-wrapper .lineAndButton hr {
+    height: 1px;
+    width: 100%;
+    background-color: var(--Light-grey);
+}
+
+#ageCalculatorApp .container .app-wrapper .lineAndButton .image {
+    background-color: var(--primary-color-Purple);
+    padding: 18px;
+    border-radius: 50%;
+    width: 70px;
+    aspect-ratio: 1/1;
+    margin-left: auto;
+    display: flex;
+    cursor: pointer;
+}
+
+#ageCalculatorApp .container .app-wrapper .lineAndButton .image:hover {
+    background-color: var(--Off-black);
+    transition: 0.3s;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -ms-transition: 0.3s;
+    -o-transition: 0.3s;
+}
+
+#ageCalculatorApp .container .app-wrapper .results .col {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+#ageCalculatorApp .container .app-wrapper .results span {
+    font-size: 80px;
+    font-weight: bold;
+    color: var(--primary-color-Purple);
+}
+
+#ageCalculatorApp .container .app-wrapper .results h2 {
+    font-size: 80px;
+    font-weight: bold;
+    font-style: italic;
+}
+
+/* Start Mobile Media Section */
+
+/* End Mobile Media Section */
+/* Medium Screens width: 767px */
+@media(max-width: 767px) {
+    #ageCalculatorApp .container {
+        box-shadow: none;
+        padding: 0;
+    }
+
+    #ageCalculatorApp .container .app-wrapper {
+        padding: 60px 20px;
+        width: fit-content;
+    }
+
+    #ageCalculatorApp .container .app-wrapper .inputs {
+        gap: 10px;
+    }
+
+    #ageCalculatorApp .container .app-wrapper .inputs .col-input input {
+        padding: 10px;
+        max-width: 90px;
+        font-size: 20px;
+    }
+
+    #ageCalculatorApp .container .app-wrapper .lineAndButton {
+        position: relative;
+        margin: 30px 0;
+    }
+
+    #ageCalculatorApp .container .app-wrapper .lineAndButton hr {
+        display: flex;
+        align-items: center;
+        position: relative;
+        margin: 30px 0;
+    }
+
+    #ageCalculatorApp .container .app-wrapper .lineAndButton .image {
+        padding: 16px;
+        width: 50px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    #ageCalculatorApp .container .app-wrapper .results span {
+        font-size: 50px;
+    }
+
+    #ageCalculatorApp .container .app-wrapper .results h2 {
+        font-size: 50px;
+    }
+}
+
+/* small Screens  width:320px */
+@media(max-width: 320px) {
+    #ageCalculatorApp .container .app-wrapper .inputs .col-input input {
+        padding: 10px 5px;
+        max-width: 70px;
+    }
+
+    #ageCalculatorApp .container .app-wrapper .results span {
+        font-size: 35px;
+    }
+
+    #ageCalculatorApp .container .app-wrapper .results h2 {
+        font-size: 35px;
+    }
+}
+
+/* End age-calcuator-app Section */
