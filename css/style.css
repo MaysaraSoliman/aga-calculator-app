@@ -231,6 +231,7 @@
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
+        margin: 0;
     }
 
     #ageCalculatorApp .container .app-wrapper .results span {
